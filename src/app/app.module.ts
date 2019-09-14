@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import {MatButtonModule, MatIconModule, MatToolbarModule} from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {HttpClientModule} from '@angular/common/http';
+import {ProductService} from './shared/services';
+import {HomeModule} from './home/home.module';
+
+
 
 @NgModule({
   declarations: [
@@ -18,9 +22,10 @@ import {HttpClientModule} from '@angular/common/http';
     MatButtonModule,
     MatIconModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    HomeModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
