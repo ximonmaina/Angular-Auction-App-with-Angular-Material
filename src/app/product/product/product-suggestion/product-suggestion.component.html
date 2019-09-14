@@ -3,9 +3,9 @@
 </div>
 
 <mat-grid-list [cols]="columns$ | async" gutterSize="16px">
-  <mat-grid-tile class="title" *ngFor="let product of products">
+  <mat-grid-tile class="title" *ngFor="let product of getFilteredProducts()">
     <a class="tile__content" fxLayout fxLayoutAlign="center center"
-    [routerLink]="['/products', product.id]">
+    [routerLink]="['/products', product.id]" >
       <div class="tile__thumbnail" [ngStyle]="{'background-image': 'url(' + product.imageUrl + ')'}"></div>
     </a>
   </mat-grid-tile>
