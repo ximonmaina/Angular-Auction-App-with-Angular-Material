@@ -1,7 +1,7 @@
 /*
 Error: File to import not found or unreadable: ~@angular/material/theming.
         on line 1 of ../../../styles/_theme.scss
-        from line 1 of home.component.scss
+        from line 1 of search-results.component.scss
 
 1: @import '../../../styles/theme';
 2: 
@@ -12,7 +12,7 @@ Error: File to import not found or unreadable: ~@angular/material/theming.
 
 Backtrace:
 ../../../styles/_theme.scss:1
-home.component.scss:1
+search-results.component.scss:1
 /var/lib/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /var/lib/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/import_node.rb:44:in `import'
 /var/lib/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -63,4 +63,4 @@ home.component.scss:1
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ~@angular/material/theming.\A         on line 1 of ../../../styles/_theme.scss\A         from line 1 of home.component.scss\A \A 1: @import '../../../styles/theme';\A 2: \A 3: :host {\A 4:   display: block;\A 5: }\A 6: "; }
+  content: "Error: File to import not found or unreadable: ~@angular/material/theming.\A         on line 1 of ../../../styles/_theme.scss\A         from line 1 of search-results.component.scss\A \A 1: @import '../../../styles/theme';\A 2: \A 3: :host {\A 4:   display: block;\A 5: }\A 6: "; }

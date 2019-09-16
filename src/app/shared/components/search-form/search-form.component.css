@@ -1,18 +1,18 @@
 /*
 Error: File to import not found or unreadable: ~@angular/material/theming.
-        on line 1 of ../styles/_theme.scss
-        from line 1 of app.component.scss
+        on line 1 of ../../../../styles/_theme.scss
+        from line 1 of search-form.component.scss
 
-1: @import '../styles/theme';
+1: @import '../../../../styles/theme';
 2: 
 3: :host {
 4:   display: block;
-5:   height: 100%;
-6: }
+5: }
+6: 
 
 Backtrace:
-../styles/_theme.scss:1
-app.component.scss:1
+../../../../styles/_theme.scss:1
+search-form.component.scss:1
 /var/lib/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/import_node.rb:67:in `rescue in import'
 /var/lib/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/import_node.rb:44:in `import'
 /var/lib/gems/2.5.0/gems/sass-3.4.25/lib/sass/tree/import_node.rb:28:in `imported_file'
@@ -63,4 +63,4 @@ app.component.scss:1
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: File to import not found or unreadable: ~@angular/material/theming.\A         on line 1 of ../styles/_theme.scss\A         from line 1 of app.component.scss\A \A 1: @import '../styles/theme';\A 2: \A 3: :host {\A 4:   display: block;\A 5:   height: 100%;\A 6: }"; }
+  content: "Error: File to import not found or unreadable: ~@angular/material/theming.\A         on line 1 of ../../../../styles/_theme.scss\A         from line 1 of search-form.component.scss\A \A 1: @import '../../../../styles/theme';\A 2: \A 3: :host {\A 4:   display: block;\A 5: }\A 6: "; }

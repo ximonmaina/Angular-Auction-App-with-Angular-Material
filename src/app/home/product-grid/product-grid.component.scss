@@ -4,17 +4,13 @@
   display: block;
 }
 
-.grid-list-container {
-  margin: 16px;
-}
-
 .tile {
   background-color: mat-color($nga-background, card);
+
   &:hover {
     @include mat-elevation(4);
     transition: .3s;
   }
-
 }
 
 .tile__content {
@@ -50,19 +46,16 @@
 .tile__title {
   color: mat-color($nga-foreground, text);
   font-family: 'Abril Fatface', cursive;
-  font-size: mat-font-size($nga-typography, display-1);
-  line-height: mat-line-height($nga-typography, display-1);
-}
-
-.tile__title--sm {
   font-size: mat-font-size($nga-typography, headline);
   line-height: mat-line-height($nga-typography, headline);
+}
+
+.tile__title--lg {
+  font-size: mat-font-size($nga-typography, display-1);
+  line-height: mat-line-height($nga-typography, display-1);
 }
 
 .tile__title--xs {
   font-size: mat-font-size($nga-typography, title);
   line-height: mat-line-height($nga-typography, title);
 }
-
-
-
