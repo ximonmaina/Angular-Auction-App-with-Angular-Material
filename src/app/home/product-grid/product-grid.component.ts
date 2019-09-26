@@ -1,8 +1,9 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Inject, Input, OnInit} from '@angular/core';
 import {Product} from '../../shared/services';
 import {Observable} from 'rxjs';
 import {MediaObserver} from '@angular/flex-layout';
 import {map, startWith} from 'rxjs/operators';
+import {API_BASE_URL} from '../../app.tokens';
 
 @Component({
   selector: 'nga-product-grid',
@@ -20,7 +21,8 @@ export class ProductGridComponent implements OnInit {
     ['xl', 5]
   ]);
 
-  constructor(private media: MediaObserver) {
+  constructor(@Inject(API_BASE_URL) private readonly baseUrl,
+              private media: MediaObserver) {
     this.columns$ = this.media.media$.pipe(
       map(mc => this.breakpointsToColumnsNumber.get(mc.mqAlias) as number), startWith(3)
     );
@@ -29,4 +31,7 @@ export class ProductGridComponent implements OnInit {
   ngOnInit() {
   }
 
+  urlFor(product: Product): string {
+    return `${this.baseUrl}/${product.imageUrl}`;
+  }
 }

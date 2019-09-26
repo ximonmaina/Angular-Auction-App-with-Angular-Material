@@ -1,8 +1,9 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Inject, Input, OnInit} from '@angular/core';
 import {Product} from '../../../shared/services';
 import {Observable} from 'rxjs';
 import {MediaObserver} from '@angular/flex-layout';
 import {map, startWith} from 'rxjs/operators';
+import {API_BASE_URL} from '../../../app.tokens';
 
 @Component({
   selector: 'nga-product-suggestion',
@@ -32,7 +33,8 @@ export class ProductSuggestionComponent implements OnInit {
     ['xl', 3],
   ]);
 
-  constructor(private media: MediaObserver) {
+  constructor(@Inject(API_BASE_URL) private readonly baseUrl ,
+              private media: MediaObserver) {
     this.columns$ = this.media.media$
       .pipe(
         map(mc => this.breakpointsToColumnsNumber.get(mc.mqAlias)),
@@ -50,6 +52,10 @@ export class ProductSuggestionComponent implements OnInit {
       return item.id !== prodId;
     });
     return prods;
+  }
+
+  urlFor(product: Product): string {
+    return `${this.baseUrl}/${product.imageUrl}`;
   }
 
 }
